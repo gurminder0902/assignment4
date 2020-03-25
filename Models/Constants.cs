@@ -22,14 +22,11 @@ namespace CSV.Models
             public const string ImageFile = "myimage.jpg";
        
 
-            public readonly static string StudentCSVFile = "/Users/gurmindersingh/Downloads/assignmnet3/Content/Data/students.csv";
-            public readonly static string StudentJSONFile = "/Users/gurmindersingh/Downloads/assignmnet3/Content/Data/students.json";
-            public static readonly string StudentXMLFile = "/Users/gurmindersingh/Downloads/assignmnet3/Content/Data/students.xml";
+            public readonly static string StudentCSVFile = "/Users/gurmindersingh/Downloads/assignment3/Content/Data/students.csv";
+            public readonly static string StudentJSONFile = "/Users/gurmindersingh/Downloads/assignment3/Content/Data/students.json";
+            public static readonly string StudentXMLFile = "/Users/gurmindersingh/Downloads/assignment3/Content/Data/students.xml";
 
-            //public readonly static string StudentCSVFile = $"{DataFolder}\\students.csv";
-            //public readonly static string StudentJSONFile = $"{DataFolder}\\students.json";
-            //public readonly static string StudentXMLFile = $"{DataFolder}\\students.xml";
-
+           
 
         }
 

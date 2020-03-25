@@ -162,12 +162,6 @@
     <DateOfBirth>07/04/1993</DateOfBirth>
     <ImageData>False</ImageData>
   </Students>
-  <Students StudentID="200447330" FirstName="Swathi">
-    <LastName>Palavalli</LastName>
-    <Age>28</Age>
-    <DateOfBirth>04/05/1992</DateOfBirth>
-    <ImageData>False</ImageData>
-  </Students>
   <Students StudentID="200447599" FirstName="KavirajSingh">
     <LastName>Jon</LastName>
     <Age>26</Age>

@@ -1,19 +1,12 @@
-﻿//latest 
-
-using CSV.Models;
+﻿using CSV.Models;
 using CSV.Models.Utilities;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Text.Json;
 using System.Threading;
-using System.Xml;
 using System.Xml.Linq;
 
 namespace CSV
@@ -72,7 +65,7 @@ namespace CSV
                    
                 }
 
-                Console.WriteLine("Info File Path::: " + infoFilePath);
+                Console.WriteLine("Info File Path: " + infoFilePath);
 
                 string imageFilePath = student.FullPathUrl + "/" + Constants.Locations.ImageFile;
 
@@ -85,7 +78,7 @@ namespace CSV
 
                    
 
-                   Console.WriteLine("Image File Path::: " + imageFilePath);
+                   Console.WriteLine("Image File Path: " + imageFilePath);
 
 
                 }
@@ -97,7 +90,7 @@ namespace CSV
 
                 }
 
-                Console.WriteLine("Image File Path::: " + imageFilePath);
+                Console.WriteLine("Image File Path: " + imageFilePath);
 
 
                 students_list.Add(student);
@@ -105,9 +98,7 @@ namespace CSV
            
 
             }
-  
 
-            
                  List<JsonModel> jsons = new List<JsonModel>();
           
             using (StreamWriter fs = new StreamWriter(Constants.Locations.StudentCSVFile))
@@ -117,7 +108,7 @@ namespace CSV
                 foreach (var student in students_list)
                 {
                     fs.WriteLine(student.ToCSV());
-                    Console.WriteLine("CSV :: " + student.ToCSV());
+                    Console.WriteLine("CSV : " + student.ToCSV());
                     Console.WriteLine("String :: " + student.ToString());
 
 
@@ -166,17 +157,17 @@ namespace CSV
             {
              
 
-                if (list.FirstName.StartsWith("S"))
+                if (list.FirstName.StartsWith("G"))
                 {
                     count_startswith++;
-                    Console.WriteLine("Starts With S>>: " + list);
+                    Console.WriteLine("Starts With G: " + list);
 
                 }
             }
 
 
 
-            Console.WriteLine("Count Starts With S>>: " + count_startswith);
+            Console.WriteLine("Count Starts With G: " + count_startswith);
 
             //Find my record
 
@@ -190,15 +181,10 @@ namespace CSV
             var maximum_age = students_list.Max(x => x.Age);
 
 
+            Console.WriteLine("Average Age : " + average_age);
 
-
-            Console.WriteLine("Average Age: " + average_age);
-
-            Console.WriteLine("Minimum Age:" + minimum_age);
-            Console.WriteLine("Maximum Age:" + maximum_age);
-
-
-
+            Console.WriteLine("Minimum Age :" + minimum_age);
+            Console.WriteLine("Maximum Age :" + maximum_age);
 
             FTP.UploadFile(Constants.Locations.StudentCSVFile, Constants.FTP.CSVUploadLocation);
             FTP.UploadFile(Constants.Locations.StudentXMLFile, Constants.FTP.XMLUploadLocation);
